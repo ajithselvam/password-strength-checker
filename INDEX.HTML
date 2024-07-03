@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+<H1>CYBER-SECURITY-PROJECT BY #N.AJITH SELVAM#</H1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Password Strength Checker</title>
+	<link rel="stylesheet" href="STYLES.CSS">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="password"] {
+            width: 300px;
+            padding: 8px;
+            font-size: 25px;
+			border-radius:10px;
+			background-color:purple;
+			
+        }
+        #strength-meter {
+            margin-top: 30px;
+			font-size:30px;
+        }
+    </style>
+</head>
+<body> 
+
+
+<div>
+
+
+    <h2>Password Strength Checker</h2>
+    <label for="password">Enter your password:</label>
+    <input type="password" id="password" oninput="checkPasswordStrength()">
+    <div id="strength-meter"></div>
+
+    <script>
+        function checkPasswordStrength() {
+            var password = document.getElementById('password').value;
+            var meter = document.getElementById('strength-meter');
+            var strength = 0;
+
+            // Check length	
+            if (password.length >= 8) {
+                strength += 1;
+            }
+            // Check for numbers
+            if (/\d/.test(password)) {
+                strength += 1;
+            }
+            // Check for lowercase letters
+            if (/[a-z]/.test(password)) {
+                strength += 1;
+            }
+            // Check for uppercase letters
+            if (/[A-Z]/.test(password)) {
+                strength += 1;
+            }
+            // Check for special characters
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                strength += 1;
+            }
+
+            // Update meter based on strength
+            switch (strength) {
+                case 0:
+                case 1:
+                    meter.style.width = '20%';
+                    meter.style.background = 'red';
+                    meter.textContent = 'Weak';
+					
+                    break;
+                case 2:
+                    meter.style.width = '40%';
+                    meter.style.background = 'orange';
+                    meter.textContent = 'Fair';
+                    break;
+                case 3:
+                    meter.style.width = '60%';
+                    meter.style.background = 'yellow';
+                    meter.textContent = 'Good';
+                    break;
+                case 4:
+                    meter.style.width = '80%';
+                    meter.style.background = 'lightgreen';
+                    meter.textContent = 'Strong';
+                    break;
+                case 5:
+                    meter.style.width = '100%';
+                    meter.style.background = 'green';
+                    meter.textContent = 'Very Strong';
+                    break;
+            }
+        }
+    </script>
+
+
+
+</div>
+
+
+
+</body>
+</html>
