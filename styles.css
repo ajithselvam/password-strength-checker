@@ -1,0 +1,82 @@
+BODY  {
+	BACKGROUND-IMAGE:URL("https://images3.alphacoders.com/618/618004.jpg");
+	BACKGROUND-repeat:NO-REPEAT;
+    BACKGROUND-ATTACHMENT:fixed;
+    BACKGROUND-SIZE:COVER;	
+	
+	
+	
+	
+	TEXT-ALIGN:CENTER;
+	
+	
+	
+	
+	
+	
+	
+	https://images3.alphacoders.com/618/618004.jpg
+}
+
+
+
+H2  {
+	
+	BACKGROUND-COLOR:mediumspringgreen;
+	BORDER-RADIUS:10PX;
+	
+	
+	
+}
+
+
+
+
+div  {
+	
+	BACKGROUND-COLOR:mediumspringgreen;
+	MARGIN-LEFT:10%;
+	MARGIN-RIGHT:10%;
+	margin-top:10%;
+	margin-bottom:20%;
+	
+	HEIGHT:150PX;
+	
+	
+	BORDER-RADIUS:10px;
+	padding:20px;
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+H1{
+	
+	
+	BACKGROUND-COLOR:mediumspringgreen;
+	BORDER-RADIUS:5px;
+	height:50px;
+	TEXT-ALIGN:CENTER;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+}
+
+
+
+label {
+	font-size:20px;
+	
+	
+	
+	
+}
+
+
+
